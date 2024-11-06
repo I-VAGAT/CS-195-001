@@ -1,0 +1,5 @@
+Current Health = 2, Coins = 15, Numofitems: 5
+chest plate helmet shield boots gauntlets 
+A monster attacks you for 3 damage!
+Your have lost the game as your health dropped to -1
+Please enter to keep walking

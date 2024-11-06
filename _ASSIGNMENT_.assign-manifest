@@ -1,0 +1,194 @@
+{
+  "course": {
+    "institution": "Caldwell University",
+    "name": "CS 195 - Programming 1",
+    "description": "Introduction to Computer Science and Computer Programming",
+    "url": "https://caldwell.blackboard.com/",
+    "instructor": {
+      "name": "Dr. V",
+      "email": "vveksler@caldwell.edu"
+    }
+  },
+  "name": "Assignment 6 - rpg",
+  "due": "2024-10-28",
+  "description": "",
+  "instructions": "### RPG game\n\nBuild a text-based RPG game in the `rpg.py` file included in this folder.\n\nBelow is the main game loop:\n\n1. `print(\"\\033[H\\033[2J\", end=\"\") #clear screen`\n2. display current health, number of items, and coins\n3. display items using a for-loop\n4. encounter random thing\n5. if this thing is an item and player does not yet have it, ask them if they want it\n    - if player response is not 'n' or 'N', take the item\n6. otherwise, if this thing is a creature:\n    - if it's a monster, it attacks player\n      - attack amount = 7 - number of armor items\n      - let player know they were attacked by attack amount\n      - reduce player health by attack amount\n        - if player health <= 0, game ends, player loses\n    - ask player if they want to fight creature\n      - if player doesn't say 'n' or 'N'\n        - they they kill creature\n          - increase player coins \n            - by 10 for a monster\n            - by 1 for any other creature\n          - if coins >= 100, game ends, player wins!\n7. `input(\"Press ENTER to keep walking\") #wait for Enter key`\n8. repeat step 1\n\nHere's how to start your rpg.py file:\n  - `import random`\n  - create a constant `CREATURES` which is a list `['monster', 'rabbit', 'fox', 'rat']`\n  - create constant `ITEMS` which is a list `['helmet', 'shield', 'boots', 'chest plate', 'gauntlets']`\n  - create constant `OTHER_THINGS` which is a list `['bush', 'big tree', 'rock']`\n  - create constant `ALL_THINGS` which is a combination of above three lists\n  - set initial player health to `20`\n\nUse `random.choice(ALL_THINGS)` to select random thing.\n\nCopy-paste sample output of your code running under to the `output.txt` file included in this folder.\n\n\n### Extra Credit (10pts)\n\n- create a copy of your `rpg.py`, call it `rpgavg.py`\n- alter `rpgavg.py` to run the game 1000 times and report average score and win-rate, assuming user always says 'yes' to every action\n  - remove all input statements, so that the code runs without need for user input\n  - collect win/loss and scores (i.e., coins earned)\n  - report win-rate, report average score\n\n### Extra Credit 2 (10-50pts)\n\n- Alter the game to make it more interesting; e.g., make player choices more meaningful\n  - add fight sequences\n    - creatures don't die from single hit\n    - player can run away in the middle of a fight\n  - all creatures can fight back\n  - each creature type has different health pool and attack values\n  - add more random elements to the game\n  - monsters might drop healing potions\n  - different levels have different monsters\n  - add sound effects and/or visualizations",
+  "ignoreSubmit": "",
+  "ignoreSupplied": "",
+  "files": [
+    {
+      "name": ".git/HEAD",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 23
+    },
+    {
+      "name": ".git/config",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 137
+    },
+    {
+      "name": ".git/description",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 73
+    },
+    {
+      "name": ".git/hooks/applypatch-msg.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 478
+    },
+    {
+      "name": ".git/hooks/commit-msg.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 896
+    },
+    {
+      "name": ".git/hooks/post-update.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 189
+    },
+    {
+      "name": ".git/hooks/pre-applypatch.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 424
+    },
+    {
+      "name": ".git/hooks/pre-commit.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 1642
+    },
+    {
+      "name": ".git/hooks/pre-push.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 1348
+    },
+    {
+      "name": ".git/hooks/pre-rebase.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 4898
+    },
+    {
+      "name": ".git/hooks/pre-receive.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 544
+    },
+    {
+      "name": ".git/hooks/prepare-commit-msg.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 1492
+    },
+    {
+      "name": ".git/hooks/update.sample",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 3610
+    },
+    {
+      "name": ".git/info/exclude",
+      "added": true,
+      "created": "2024-11-06 01:07",
+      "modified": "2024-11-06 01:07",
+      "size": 250
+    },
+    {
+      "name": "output.txt",
+      "supplied": true,
+      "created": "2024-09-21 21:48",
+      "modified": "2024-10-28 23:36",
+      "size": 206,
+      "log": {
+        "records": 20,
+        "last": "2024-10-29 13:29"
+      },
+      "edited": true,
+      "checksums": {
+        "ok": 1,
+        "failed": 0,
+        "unhashed": 0,
+        "last": "2024-10-28 23:36"
+      }
+    },
+    {
+      "name": "rpg.py",
+      "supplied": true,
+      "created": "2024-10-01 23:59",
+      "modified": "2024-10-28 23:35",
+      "size": 1884,
+      "log": {
+        "records": 6529,
+        "last": "2024-11-06 01:07"
+      },
+      "edited": true,
+      "checksums": {
+        "ok": 155,
+        "failed": 0,
+        "unhashed": 0,
+        "last": "2024-10-28 23:35"
+      }
+    },
+    {
+      "name": "rpgavg.py",
+      "added": true,
+      "created": "2024-10-28 23:14",
+      "modified": "2024-10-28 23:15",
+      "size": 1875,
+      "log": {
+        "records": 13,
+        "last": "2024-10-29 12:57"
+      },
+      "edited": true,
+      "checksums": {
+        "ok": 2,
+        "failed": 0,
+        "unhashed": 0,
+        "last": "2024-10-28 23:36"
+      }
+    }
+  ],
+  "modified": "2024-11-06 01:07",
+  "modifiedMs": 1730873262720,
+  "required": {
+    "app": "LectureAssign for VSCode",
+    "ver": "0.2.0",
+    "url": "https://lecturedot.github.io/LectureAssign-vscode/"
+  },
+  "created": {
+    "time": "2024-10-02 00:00",
+    "uuid": "e69b5c4a-b9a9-4b68-86d8-05c1c535945a"
+  },
+  "started": {
+    "time": "2024-10-27 02:52",
+    "uuid": "b0e4aa9d-5292-4bb7-bcc3-a455d6b2ca2d"
+  },
+  "submissions": [
+    {
+      "time": "2024-10-28 23:36",
+      "uuid": "8dd7169f-2512-4cbd-9de4-ff7766f2d631",
+      "path": "/Users/bhagat/Documents/caldwell university classes/cs195/assignment/Assignment 6 - rpg.assign/Assignment 6 - rpg-2024-10-28-23-36.submit"
+    }
+  ]
+}
